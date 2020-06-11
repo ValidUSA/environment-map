@@ -4,7 +4,7 @@
   "description": "",
   "main": "environment_map.js",
   "scripts": {
-    "build": "ncc build ./index.js"
+    "build": "ncc build ./index.js -m"
   },
   "author": "",
   "license": "ISC",
