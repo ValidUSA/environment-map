@@ -1,0 +1,18 @@
+{
+  "name": "actions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "environment_map.js",
+  "scripts": {
+    "build": "ncc build ./index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@actions/core": "^1.2.0",
+    "@actions/github": "^1.1.0"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.20.5"
+  }
+}

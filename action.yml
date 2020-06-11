@@ -1,0 +1,16 @@
+name: environment_map
+description: 'Return correct environment string for docker image tagging'
+inputs:
+  github_ref:
+    description: 'Current branch or tag'
+    required: true
+
+outputs:
+  environment:
+    description: "Environment string"
+  altEnvironment:
+    description: "Environment string compatible with cluster module"
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
