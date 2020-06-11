@@ -2,10 +2,7 @@
   "name": "actions",
   "version": "1.0.0",
   "description": "",
-  "main": "environment_map.js",
-  "scripts": {
-    "build": "ncc build ./index.js"
-  },
+  "main": "index.js",
   "author": "",
   "license": "ISC",
   "dependencies": {

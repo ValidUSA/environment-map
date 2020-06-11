@@ -5,7 +5,7 @@ ref = ref.replace("refs/heads/","");
 
 console.log(ref);
 switch (ref) {
-  case /master/.test(ref) && ref:
+  case /develop/.test(ref) && ref:
     var env = "DEV";
     var altEnv = "develop";
     break;
