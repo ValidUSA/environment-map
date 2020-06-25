@@ -8,14 +8,18 @@ switch (ref) {
   case /develop/.test(ref) && ref:
     var env = "DEV";
     var altEnv = "develop";
+    var subdomain = ".dev"
     break;
   case /^(release-*(\d*))/.test(ref) && ref:
     var env = "QA";
     var altEnv = "qa";
+    var subdomain = ".qa"
     break;
   default:
     var env = "BRANCH";
+    var subdomain = ".dev"
     var altEnv = "none";
 }
 core.setOutput("environment", env);
 core.setOutput("altEnvironment", altEnv);
+core.setOutput("subdomain", subdomain);
