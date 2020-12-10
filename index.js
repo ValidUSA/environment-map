@@ -10,6 +10,11 @@ switch (ref) {
     var altEnv = "develop";
     var subdomain = ".dev"
     break;
+  case /main/.test(ref) && ref:
+    var env = "DEV";
+    var altEnv = "develop";
+    var subdomain = ".dev"
+    break;
   case /^(release-*(\d*))/.test(ref) && ref:
     var env = "QA";
     var altEnv = "qa";
