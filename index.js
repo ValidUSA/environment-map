@@ -28,3 +28,4 @@ switch (ref) {
 core.setOutput("environment", env);
 core.setOutput("altEnvironment", altEnv);
 core.setOutput("subdomain", subdomain);
+core.setOutput("shortBranchName", ref);
