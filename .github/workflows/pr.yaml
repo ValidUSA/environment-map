@@ -1,0 +1,17 @@
+# Valid USA ID SRE version: v1
+---
+name: "Pull Request Checks"
+
+# yamllint disable-line rule:truthy
+on:
+  pull_request:
+    types: ['opened', 'edited', 'reopened', 'synchronize']
+jobs:
+  pull_reqest_check:
+    name: "Pull Request title begins with a JIRA story ID"
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: ValidUSA/pr-lint-action@v1.1.2
+        with:
+          title-regex: '^[A-Z0-9]*-\d*'
+          title-regex-flags: 'g'
