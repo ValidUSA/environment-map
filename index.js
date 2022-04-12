@@ -20,6 +20,16 @@ switch (ref) {
     var altEnv = "qa";
     var subdomain = ".qa";
     break;
+  case /staging/.test(ref) && ref:
+    var env = "STAGING";
+    var altEnv = "staging";
+    var subdomain = ".staging";
+    break;
+  case /prod/.test(ref) && ref:
+    var env = "PROD";
+    var altEnv = "prod";
+    var subdomain = "";
+    break;
   default:
     var env = "BRANCH";
     var altEnv = "none";
